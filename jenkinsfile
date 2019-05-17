@@ -1,8 +1,7 @@
 node{
     stage('Downloading the code') {
     echo "downloading the code"
-    git credentialsId: '8bb71880-a4f3-4584-9a07-f7ec5da94659', url: 'https://github.com/vasimdevops/pipelinescript.git'
-
+    git credentialsId: '8bb71880-a4f3-4584-9a07-f7ec5da94659', url: 'https://github.com/vasimdevops/studentwebapp.git'
     }
     
     stage ('comipiling the code') {
