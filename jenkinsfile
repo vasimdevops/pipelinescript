@@ -1,0 +1,22 @@
+node{
+    stage('Downloading the code') {
+    echo "downloading the code"
+    git credentialsId: '8bb71880-a4f3-4584-9a07-f7ec5da94659', url: 'https://github.com/vasimdevops/pipelinescript.git'
+
+    }
+    
+    stage ('comipiling the code') {
+    echo "compiling the code"
+    sh 'mvn compile'
+    }
+    
+    stage('packaging the code') {
+    echo "packaging the code"
+    sh 'mvn package'
+    }
+    
+    stage('deploying the code') {
+    echo "deploying the code"
+    sh 'mvn deploy'
+    }
+} 
